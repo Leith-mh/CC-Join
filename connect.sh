@@ -1,15 +1,15 @@
 #!/bin/sh
 
-apt-get update
+apt-get -y update
 
 # Install wireguard
-apt install wireguard
+apt install -y wireguard
 
 # install netclient
 curl -sL 'https://apt.netmaker.org/gpg.key' | sudo tee /etc/apt/trusted.gpg.d/netclient.asc
 curl -sL 'https://apt.netmaker.org/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/netclient.list
-sudo apt update
-sudo apt install netclient
+sudo apt update -y
+sudo apt install -y netclient
 
 systemctl enable netclient
 
