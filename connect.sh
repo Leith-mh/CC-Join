@@ -3,7 +3,7 @@
 apt get update
 
 # Install wireguard
-apt install wireguard-tools
+apt install wireguard
 
 # install netclient
 curl -sL 'https://apt.netmaker.org/gpg.key' | sudo tee /etc/apt/trusted.gpg.d/n
