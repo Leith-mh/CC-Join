@@ -39,6 +39,9 @@ ExecStart= \n
 ExecStart=/usr/local/bin/k3s agent --node-ip $IP --flannel-iface=nm-k3s
 EOF` > /etc/systemd/system/k3s.service.d/network.conf
 
+systemctl daemon-reload
+systemctl restart k3s-agent.service
+
 
 
 
